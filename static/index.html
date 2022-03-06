@@ -37,6 +37,44 @@
         </div>
     </nav>
 
+    <!-- Rserve Form Modal -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -44,16 +82,18 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
+                <!-- Logo Image -->
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid align-self-center">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                  <a href="#reservationForm" class="btn btn-block btn-warning" role="button">Reserve</a>
+                  <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reserveform">Reserve Table</a>
               </div>
             </div>
         </div>
     </header>
 
+    <!-- Main Content -->
     <div class="conatiner">
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
@@ -113,7 +153,7 @@
     <!-- Reservation Form Card -->
     <div class="row row-content align-items-center">
         <div class="col-12 col-md-8 offset-2">
-              <div class="card" id="reservationForm">
+              <div class="card" id="reserveform">
                   <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
                   <div class="card-body">
                       <form>
@@ -224,5 +264,11 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Reserve Form Tool Tip -->
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 </html>
