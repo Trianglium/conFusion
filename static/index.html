@@ -196,6 +196,7 @@
                     <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Weekend Grand Buffet">
                 </div>
             </div>
+        </div>
 
           <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
@@ -258,9 +259,13 @@
                         <div class="form-group col-4">
                              <h6>Section</h6>
                         </div>
-                        <div class="form-group col-8">
-                          <button type="submit" class="btn btn-success">Non-Smoking</button>
-                          <button type="submit" class="btn btn-danger">Smoking</button>
+                        <div class="btn-group col-8 btn-group-toggle" data-toggle="buttons">
+                          <label class="btn btn-success active">
+                            <input type="radio" name="tableSection" id="nonsmoke" autocomplete="off" checked>Non-Smoking
+                          </label>
+                          <label class="btn btn-danger">
+                            <input type="radio" name="tableSection" id="smoke" autocomplete="off">Smoking
+                          </label>
                         </div>
                       </div>
                      <div class="form-row mt-3">
