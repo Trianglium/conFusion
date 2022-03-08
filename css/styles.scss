@@ -77,17 +77,13 @@ body{
     bottom: 0px;
     z-index: 1;
 }
-
-
-.modal {
-    .modal-header: {
-        background: $background-dark;
-        color: $background-light;
-        .close {
-            color: $background-pale;
-        }
-    }
-    .modal-content {
-        background: $background-pale;
-    }
+.modal-header {
+    background: $background-dark;
+    color: $lt-gray;
+    button {
+        color: $background-pale;
+  	}
+}
+.modal-content {
+    background: $background-pale;
 }
