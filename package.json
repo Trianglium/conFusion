@@ -1,26 +1,40 @@
 {
-  "name": "git-test",
+  "name": "confusion",
   "version": "1.0.0",
-  "description": "This is the Git and Node basic learning project",
+  "description": "Ristorante con Fusion (HKU) Course Project",
   "main": "index.html",
   "scripts": {
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lite": "lite-server",
-    "scss": "node-sass -o css/ css/",
+    "scss": "node-sass -o css/ css/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://jogesh_k_muppala@bitbucket.org/jogesh_k_muppala/git-test.git"
+    "url": "git+https://github.com/Trianglium/confusion.git"
   },
-  "author": "",
+  "keywords": [
+    "React",
+    "FullStack",
+    "JavaScript",
+    "Sass",
+    "Less",
+    "Node JS",
+    "Bootstrap"
+  ],
+  "author": "Jordan Brocker Rudow",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/jogesh_k_muppala/git-test#readme",
+  "bugs": {
+    "url": "https://github.com/Trianglium/confusion/issues"
+  },
+  "homepage": "https://github.com/Trianglium/confusion#readme",
   "devDependencies": {
-    "lite-server": "^2.2.2"
+    "lite-server": "^2.6.1"
   },
   "dependencies": {
-    "bootstrap-social": "^5.1.1",
-    "font-awesome": "^4.7.0"
+    "bootstrap": "^4.6.1",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "sass": "^1.49.9"
   }
 }
