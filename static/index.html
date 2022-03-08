@@ -34,7 +34,7 @@
                   <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginBtn">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
@@ -48,7 +48,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="loginClose">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -71,7 +71,7 @@
                         </div>
                         <!--Login Form buttons -->
                         <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" id="loginClose">Cancel</button>
                             <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
                         </div>
                     </form>
@@ -87,14 +87,17 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
+
                 <!-- Logo Image -->
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid align-self-center" alt="Ristorante Con Fusion Logo">
                 </div>
+
                 <!-- Reserve Table Button (Modal)-->
                 <div class="col-12 col-sm align-self-center">
-                  <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveform">Reserve Table</a>
+                  <a role="button" class="btn btn-block nav-link btn-warning" id="reserveBtn">Reserve Table</a>
               </div>
+
             </div>
         </div>
     </header>
@@ -226,7 +229,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="reserveClose">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -259,7 +262,7 @@
                         <div class="form-group col-4">
                              <h6>Section</h6>
                         </div>
-                        <div class="btn-group col-8 btn-group-toggle" data-toggle="buttons">
+                        <div class="btn-group col-8">
                           <label class="btn btn-success active">
                             <input type="radio" name="tableSection" id="nonsmoke" autocomplete="off" checked>Non-Smoking
                           </label>
@@ -284,7 +287,7 @@
                      </div>
 
                      <div class="form-group col-8">
-                       <button type="submit" class="btn btn-secondary">Cancel</button>
+                       <button type="submit" class="btn btn-secondary" id="reserveClose">Cancel</button>
                        <button type="submit" class="btn btn-primary">Reserve</button>
                      </div>
                      </div>
@@ -339,17 +342,20 @@
            </div>
         </div>
     </footer>
+    <!-- Bootstrap Initial Scripts -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS.  -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
     <!-- Reserve Form Tool Tip -->
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
-    <!-- Bootstrap & JQuery module: Carousel buttons -->
+
+    <!-- Carousel play/pause button -->
     <script>
       $("#carouselButton").click(function(){
           if ($("#carouselButton").children("span").hasClass('fa-pause')) {
@@ -364,6 +370,30 @@
           }
       });
      </script>
+
+     <!-- Login Modal JS -->
+     <script>
+        $(document).ready(function(){
+            $("#loginBtn").click(function(){
+              $("#loginModal").modal({show: true});
+            });
+            $("#loginClose").click(function(){
+              $("#loginModal").modal({show: false});
+            });
+        });
+     </script>
+
+    <!-- Reserve Table Modal JS -->
+    <script>
+       $(document).ready(function(){
+            $("#reserveBtn").click(function(){
+              $("#reserveform").modal({show: true});
+            });
+            $("#reserveClose").click(function(){
+              $("#reserveform").modal({show: false});
+            });
+        });
+    </script>
 
 
 
