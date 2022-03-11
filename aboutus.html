@@ -26,17 +26,60 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
           </button>
-           <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
+           <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41" alt="Ristorante Con Fusion Logo"></a>
            <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                  <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                  <li class="nav-item active"><a class="nav-link" href="./about.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                  <li class="nav-item"><a class="nav-link active" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                   <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                   <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a id="loginBtn">
+                    <span class="fa fa-sign-in"></span> Login</a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <!-- Login Form Modal -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Login Form buttons -->
+                        <div class="form-row">
+                            <button type="submit" class="btn btn-secondary btn-sm ml-auto" id="loginClose">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -45,9 +88,17 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
+
+                <!-- Logo Image -->
                 <div class="col-12 col-sm align-self-center">
-                    <img src="img/logo.png" class="img-fluid">
+                    <img src="img/logo.png" class="img-fluid align-self-center" alt="Ristorante Con Fusion Logo">
                 </div>
+
+                <!-- Reserve Table Button (Modal)-->
+                <div class="col-12 col-sm align-self-center">
+                  <a role="button" class="btn btn-block nav-link btn-warning" id="reserveBtn">Reserve Table</a>
+              </div>
+
             </div>
         </div>
     </header>
@@ -214,6 +265,81 @@
             </div>
        </div>
 
+     </div>
+
+     <!-- Reserve Form Modal -->
+     <div id="reserveform" class="modal fade" role="dialog">
+         <div class="modal-dialog modal-lg" role="content">
+             <!-- Modal content-->
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h4 class="modal-title">Reserve a Table</h4>
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 </div>
+                 <div class="modal-body">
+                     <form>
+                         <div class="form-row">
+                           <div class="form-group col-4">
+                               <h6>Number of Guests</h6>
+                           </div>
+                           <div class="form-group col-8">
+                           <label class="radio-inline">
+                           <input type="radio"> 1
+                           </label>
+                           <label class="radio-inline">
+                           <input type="radio"> 2
+                           </label>
+                           <label class="radio-inline">
+                           <input type="radio"> 3
+                           </label>
+                           <label class="radio-inline">
+                           <input type="radio"> 4
+                           </label>
+                           <label class="radio-inline">
+                           <input type="radio"> 5
+                           </label>
+                           <label class="radio-inline">
+                           <input type="radio"> 6
+                           </label>
+                          </div>
+                         </div>
+                       <div class="form-row mt-3">
+                         <div class="form-group col-4">
+                              <h6>Section</h6>
+                         </div>
+                         <div class="btn-group col-8">
+                           <label class="btn btn-success active">
+                             <input type="radio" name="tableSection" id="nonsmoke" autocomplete="off" checked>Non-Smoking
+                           </label>
+                           <label class="btn btn-danger">
+                             <input type="radio" name="tableSection" id="smoke" autocomplete="off">Smoking
+                           </label>
+                         </div>
+                       </div>
+                      <div class="form-row mt-3">
+                        <div class="form-group col-4">
+                             <h6>Date and Time</h6>
+                        </div>
+                      <div class="form-group col-4">
+                         <input type="date-inline" class="form-control" placeholder="Date" name="reservationDate">
+                     </div>
+                    <div class="form-group col-4">
+                         <input type="time-inline" class="form-control" placeholder="Time" name="reservationTime">
+                     </div>
+                    </div>
+                    <div class="form-row mt-3">
+                      <div class="form-group col-4">
+                      </div>
+
+                      <div class="form-group col-8">
+                        <button type="submit" class="btn btn-secondary" id="reserveClose">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Reserve</button>
+                      </div>
+                      </div>
+                   </form>
+                 </div>
+             </div>
+         </div>
      </div>
 
     <footer class="footer">
