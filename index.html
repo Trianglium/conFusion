@@ -16,9 +16,6 @@
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 
-  <!-- External JavaScript -->
-  <script src="js/scripts.js"></script>
-
   <title>Ristorante Con Fusion</title>
 </head>
 
@@ -351,15 +348,18 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- Reserve Form Tool Tip -->
-    <script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+    <!-- External JavaScript -->
+    <script src="js/scripts.js"></script>
 
-    <!-- Carousel play/pause button -->
     <script>
+    // Reserve Form Tool Tip
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+
+
+    // Carousel play/pause button
+
       $("#carouselButton").click(function(){
           if ($("#carouselButton").children("span").hasClass('fa-pause')) {
               $("#mycarousel").carousel('pause');
@@ -372,10 +372,9 @@
               $("#carouselButton").children("span").addClass('fa-pause');
           }
       });
-     </script>
 
-     <!-- Login Modal JS -->
-     <script>
+     // Login Modal JS
+
         $(document).ready(function(){
             $("#loginBtn").click(function(){
               $("#loginModal").modal({show: true});
@@ -384,10 +383,8 @@
               $("#loginModal").modal({show: false});
             });
         });
-     </script>
 
-    <!-- Reserve Table Modal JS -->
-    <script>
+    // Reserve Table Modal JS
        $(document).ready(function(){
             $("#reserveBtn").click(function(){
               $("#reserveform").modal({show: true});
