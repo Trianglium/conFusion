@@ -13,3 +13,7 @@ class App extends Component {
     );
   }
 }
+
+import Menu from './components/MenuComponent';
+
+    <Menu />
