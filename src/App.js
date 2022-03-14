@@ -6,6 +6,13 @@ import { DISHES } from './shared/dishes';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dishes: DISHES
+    };
+  }
+
   render() {
     return (
       <div className="App">
@@ -14,19 +21,11 @@ class App extends Component {
             <NavbarBrand href="/">Ristorante Con Fusion</NavbarBrand>
           </div>
         </Navbar>
+        <Menu dishes={this.state.dishes} />
       </div>
     );
   }
 }
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      dishes: DISHES
-    };
-  }
-
-  <Menu dishes={this.state.dishes} />
 
 export default App;
