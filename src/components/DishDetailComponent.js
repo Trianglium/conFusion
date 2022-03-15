@@ -8,7 +8,7 @@ class DishDetail extends Component {
         super(props);
 
         this.state = {
-            selectedDishDetail: null
+            selectedDetail: null
         }
     }
 
@@ -40,13 +40,10 @@ class DishDetail extends Component {
                 <div></div>
             );
         }
-        const comnts = comments.map((comment) => {
+        const dishComments = comments.map((comment) => {
             return (
-                <li key={comment.id}>
-                    <p>{comment.comment}</p>
-                    <p>{comment.author},
-                    &nbsp;
-                   {
+                <span key={comment.id} className="p-1">
+                    <p className="text-left">{comment.comment}<br/>-- {comment.author}, {
                        new Intl.DateTimeFormat('en-US',
                        {
                            year: 'numeric',
@@ -55,17 +52,17 @@ class DishDetail extends Component {
                        }).format(new Date(comment.date))
                    }
                     </p>
-                </li>
+                </span>
             )
 
         })
         return (
-          <div className="col-12 col-md-5 m-1 justify-content-left">
-                <h4> Comments </h4>
-                <p className="list-unstyled">
-                    {comnts}
-                </p>
-          </div>
+            <div className="col-12 col-md-5 m-1">
+                <h4>Comments</h4>
+                <ul className="list-unstyled">
+                    <li>{dishComments}</li>
+                </ul>
+            </div>
         );
     }
 
@@ -79,14 +76,12 @@ class DishDetail extends Component {
             );
         }
 
-        const dishItem = this.renderDish(dish);
-        const dishComments = this.renderComments(dish.comments);
+        const dishDetails = this.renderDish(dish);
+        const commentDetails = this.renderComments(dish.comments);
         return (
             <div className="row">
-              <div className="col-12 col-md-5 m-1">
-                {dishItem}
-              </div>
-                {dishComments}
+                {dishDetails}
+                {commentDetails}
             </div>
         );
     }
