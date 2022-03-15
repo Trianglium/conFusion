@@ -63,4 +63,4 @@ class DishDetail extends Component {
 }
 
 
-export default Menu;
+export default DishDetail;
