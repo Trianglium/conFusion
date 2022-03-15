@@ -11,7 +11,7 @@ class DishDetail extends Component {
             selectedDishDetail: null
         }
     }
-
+    
     renderDish(dish) {
         if(dish != null) {
             return (
@@ -46,6 +46,9 @@ class DishDetail extends Component {
                     <p>{comment.comment}</p>
                     <p>{comment.author},
                     &nbsp;
+                   {/* {comment.date} */}
+
+                   {/* Date format Changing */}
                    {
                        new Intl.DateTimeFormat('en-US',
                        {
@@ -60,15 +63,15 @@ class DishDetail extends Component {
 
         })
         return (
-          <div className="col-12 col-md-5 m-1 justify-content-left">
+            <div className="col-12 col-md-5 m-1">
                 <h4> Comments </h4>
-                <p className="list-unstyled">
+                <ul className="list-unstyled">
                     {comnts}
-                </p>
-          </div>
+                </ul>
+            </div>
         );
     }
-
+    
     render() {
 
         const dish = this.props.dish;
@@ -83,9 +86,7 @@ class DishDetail extends Component {
         const dishComments = this.renderComments(dish.comments);
         return (
             <div className="row">
-              <div className="col-12 col-md-5 m-1">
                 {dishItem}
-              </div>
                 {dishComments}
             </div>
         );
