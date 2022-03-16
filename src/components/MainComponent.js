@@ -7,6 +7,7 @@ import DishDetail from './DishdetailComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
+import Contact from './ContactComponent';
 
 import { DISHES } from '../shared/dishes';
 
@@ -14,7 +15,7 @@ class Main extends Component {
 
   constructor(props) {
     super(props);
-    
+
     this.state = {
         dishes: DISHES,
     };
@@ -34,6 +35,7 @@ class Main extends Component {
               <Route path='/home' component={HomePage} />
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
               <Redirect to="/home" />
+              <Route exact path='/contactus' component={Contact} />} />
           </Switch>
         <Footer />
       </div>
