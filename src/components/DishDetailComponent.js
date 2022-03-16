@@ -42,14 +42,7 @@ class DishDetail extends Component {
         const dishComments = comments.map((comment) => {
             return (
                 <span key={comment.id} className="p-1">
-                    <p className="text-left">{comment.comment}<br/>-- {comment.author}, {
-                       new Intl.DateTimeFormat('en-US',
-                       {
-                           year: 'numeric',
-                           month: 'long',
-                           day: '2-digit'
-                       }).format(new Date(comment.date))
-                   }
+                    <p className="text-left">{comment.comment}<br/>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
                     </p>
                 </span>
             )
