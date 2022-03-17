@@ -6,39 +6,26 @@ import { Link } from 'react-router-dom';
     function RenderDish({dish}) {
         if(dish != null) {
             return (
-                <div className="col-12 col-md-5 m-1 text-left">
-                    <Card>
+                <div className="container">
+                    <div className="row">
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
                         <CardBody>
                             <CardTitle><h5>{dish.name}</h5></CardTitle>
                             <CardText><p>{dish.description}</p></CardText>
                         </CardBody>
-                    </Card>
+                    </div>
                 </div>
             );
         }
-            else {
-                return (
-                    <div></div>
-                );
-            }
-    }
-
-    function RenderComments({comments}) {
-        if(comments == null) {
+        else {
             return (
                 <div></div>
             );
         }
-        const dishComments = comments.map((comment) => {
-            return (
-                <span key={comment.id} className="p-1">
-                    <p className="text-left">{comment.comment}<br/>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
-                    </p>
-                </span>
-            )
+    }
 
-        })
+    function RenderComments({comments}) {
+      }
         return (
             <div className="col-12 col-md-5 m-1">
                 <h4>Comments</h4>
@@ -47,15 +34,20 @@ import { Link } from 'react-router-dom';
                 </ul>
             </div>
         );
-    }
+  }
 
     const  DishDetail = (props) => {
 
         const dish = this.props.dish;
 
-        if(dish == null) {
+        if(props.dish != null) {
             return(
-                <div></div>
+                <div class="container">
+                  <div className="row">
+                      <RenderDish dish={props.dish} />
+                      <RenderComments comments={props.dish.comments} />
+                  </div>
+                </div>
             );
         }
 
