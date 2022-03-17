@@ -47,9 +47,8 @@ function About(props) {
           <Card>
             <CardBody className="bg-faded">
               <blockquote className="blockquote">
-                <p className="mb-0"></p>
-                <footer className="blockquote-footer">
-                  <cite title="Source Title"></cite>
+                <p className="mb-0">You better cut the pizza in four pieces because I'm not hungry enough to eat six.</p>
+                <footer className="blockquote-footer">Yogi Berra,<cite title="Source Title">The Wit and Wisdom of Yogi Berra, P. Pepe, Diversion Books, 2014</cite>
                 </footer>
               </blockquote>
             </CardBody>
@@ -57,8 +56,14 @@ function About(props) {
         </div>
       </div>
       <div className="row row-content">
-        <div className="col-12"></col>
-        <div className="col-12"></col>
+        <div className="col-12">
+          <h2>Corporate Leadership</h2>
+        </div>
+        <div className="col-12">
+          <Media list>
+            {leaders}
+          </Media>
+        </div>
       </div>
     </div>
   );
