@@ -33,8 +33,8 @@ import { Link } from 'react-router-dom';
                     {comments.map((comment) => {
                         return (
                             <li key={comment.id}>
-                                <p className="text-left">{comment.comment}<br/>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
-                                </p>
+                                <p>{comment.comment}</p>
+                                <p>-- {comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
                             </li>
                         );
                     })}
@@ -49,9 +49,7 @@ import { Link } from 'react-router-dom';
       }
     }
 
-    const  DishDetail = (props) => {
-
-        const dish = this.props.dish;
+  const  DishDetail = (props) => {
 
         if(props.dish != null) {
             return(
@@ -63,16 +61,11 @@ import { Link } from 'react-router-dom';
                 </div>
             );
         }
-
-        const dishDetails = this.renderDish(dish);
-        const commentDetails = this.renderComments(dish.comments);
-        return (
-            <div className="row">
-                {dishDetails}
-                {commentDetails}
-            </div>
-        );
-    }
-}
+        else {
+          return(
+            <div></div>
+          );
+        }
+  }
 
 export default DishDetail;
