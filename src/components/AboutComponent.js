@@ -20,15 +20,21 @@ function RenderLeader({leaders}) {
       </div>
     );
   }
+  else {
+    return(
+      <div></div>
+    );
+  }
 }
 
 function About(props) {
+  //if (props != null) {
 
-    const leaders = props.leaders.map((leader) => {
-        return (
-            <p>Leader {leader.name}</p>
-        );
-    });
+    //const leaders = props.leaders.map((leader) => {
+        //return (
+            //<p>Leader {leader.name}</p>
+        //);
+    //});
 
     return(
         <div className="container">
@@ -90,6 +96,7 @@ function About(props) {
             </div>
         </div>
     );
+  //}
 }
 
 export default About;
