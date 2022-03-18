@@ -17,7 +17,6 @@ function RenderLeader({leaders}) {
               </Media>
             </Media>
           </Media>
-        </Media>
       </div>
     );
   }
