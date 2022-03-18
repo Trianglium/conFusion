@@ -2,24 +2,21 @@ import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderLeader({leaders}) {
-  if (leaders != null) {
+function RenderLeader({leader}) { 
     return(
-      <div className="col-12">
-        <Media list>
-          <Media tag="li">
-            <Media left top href="#">
-              <Media
-                 object
-                 src="http://place-puppy.com/100x200"
-                 alt="place-puppy image"
-                 />
-              </Media>
+        <Media tag="li">
+            <Media left middle>
+                <Media object src={baseUrl + leader.image} alt={leader.name} />
             </Media>
-          </Media>
-      </div>
+            <Media body className="ml-5">
+                <Media heading>{leader.name}</Media>
+                <p>{leader.designation}</p>
+                <p>{leader.description}</p>
+            </Media>
+        </Media>
     );
-  }
+
+}
   else {
     return(
       <div></div>
