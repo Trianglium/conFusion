@@ -127,7 +127,9 @@ class Contact extends Component {
                                    <Input type="text" id="firstname" name="firstname"
                                        placeholder="First Name"
                                        value={this.state.firstname}
+                                       onBlur={this.handleBlur('firstname')}
                                        onChange={this.handleInputChange} />
+                                    <FormFeedback>{errors.firstname}</FormFeedback>
                                </Col>
                            </FormGroup>
                            <FormGroup row>
@@ -137,6 +139,7 @@ class Contact extends Component {
                                        placeholder="Last Name"
                                        value={this.state.lastname}
                                        onChange={this.handleInputChange} />
+                                    <FormFeedback>{errors.lastname}</FormFeedback>
                                </Col>
                            </FormGroup>
                            <FormGroup row>
