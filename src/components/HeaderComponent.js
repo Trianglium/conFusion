@@ -62,6 +62,12 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
+                <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
+                    <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
+                    <ModalBody>
+
+                    </ModalBody>
+                </Modal>
                 <div className="jumbotron">
                     <div className="container">
                         <div className="row row-header">
@@ -72,6 +78,7 @@ class Header extends Component {
                         </div>
                     </div>
                 </div>
+
             </div>
         );
     }
