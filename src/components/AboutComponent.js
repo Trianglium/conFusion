@@ -3,7 +3,6 @@ import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'r
 import { Link } from 'react-router-dom';
 
 function RenderLeader({leader}) {
-  render() {
     if(leader != null) {
       return(
         <div key={leader.id} className="col-12 mt-5">
@@ -25,7 +24,6 @@ function RenderLeader({leader}) {
         <div></div>
       );
     }
-  }
 }
 
 
@@ -89,11 +87,9 @@ const About = (props) => {
                 </div>
             </div>
             <div className="row row-content">
-                <div className="col-12">
-                    <h2>Corporate Leadership</h2>
-                </div>
-            </div>
-            <div className="row row-content">
+              <div className="col-12 mb-2">
+                  <h2>Corporate Leadership</h2>
+              </div>
               {leaders}
             </div>
         </div>
