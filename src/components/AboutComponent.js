@@ -29,9 +29,15 @@ function RenderLeader({leader}) {
 }
 
 
-const About = {props} => {
-  if (props.leaders != null) {
-    
+const About = (props) => {
+    const leaders = props.leaders.map((leader) => {
+        return (
+          <div className="col-12" key={leader.id}>
+            <RenderLeader leader={leader} />
+          </div>
+        );
+    });
+
     return(
         <div className="container">
             <div className="row">
@@ -86,13 +92,12 @@ const About = {props} => {
                 <div className="col-12">
                     <h2>Corporate Leadership</h2>
                 </div>
-                <div className="col-12">
-                  <RenderLeader leaders={props.leaders} />
-                </div>
+            </div>
+            <div className="row row-content">
+              {leaders}
             </div>
         </div>
     );
-  }
 }
 
 export default About;
