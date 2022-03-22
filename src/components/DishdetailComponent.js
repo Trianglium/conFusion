@@ -10,7 +10,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
     function RenderDish({dish}) {
         if(dish != null) {
             return (
-                <div className="col-12 col-md-5 m-1">
+                <div className="col-12 m-1 text-left">
                     <Card>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
                         <CardBody>
@@ -31,7 +31,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
     function RenderComments({comments, addComment, dishId}) {
       if(comments != null) {
         return (
-            <div className="col-12 col-md-5 m-1">
+            <div className="col-12 m-1 text-left">
                 <h4>Comments</h4>
                 <ul className="list-unstyled">
                     {comments.map((comment) => {
@@ -64,7 +64,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
                         <BreadcrumbItem><Link to="/menu">Menu</Link></BreadcrumbItem>
                         <BreadcrumbItem active>{props.dish.name}</BreadcrumbItem>
                     </Breadcrumb>
-                    <div className="col-12">
+                    <div className="col-12 text-left">
                         <h3>{props.dish.name}</h3>
                         <hr />
                     </div>
@@ -101,8 +101,7 @@ class CommentForm extends Component{
 
 	handleSubmit(values) {
       this.toggleModal();
-      console.log('Current State is: ' + JSON.stringify(values));
-      alert('Current State is: ' + JSON.stringify(values));
+      this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
   toggleModal(){
