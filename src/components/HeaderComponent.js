@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label  } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -37,10 +37,11 @@ class Header extends Component {
     render() {
         return(
             <div>
+                {/* Navbar */}
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"><img src='assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src='../public/assets/images/logo.png' height="30" width="41" alt='Ristorante Con Fusion' /></NavbarBrand>
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav className="ml-auto" navbar>
                             <NavItem>
@@ -62,9 +63,11 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
+                {/* Login Modal */}
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>
+                      {/* Login Form Handling */}
                       <Form onSubmit={this.handleLogin}>
                               <FormGroup>
                                   <Label htmlFor="username">Username</Label>
@@ -87,6 +90,7 @@ class Header extends Component {
                         </Form>
                     </ModalBody>
                 </Modal>
+                {/* Jumbotron Div Begin */}
                 <div className="jumbotron">
                     <div className="container">
                         <div className="row row-header">
