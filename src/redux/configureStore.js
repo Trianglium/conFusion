@@ -1,4 +1,3 @@
-import {createStore} from 'redux';
 import { Reducer, initialState } from './reducer'
 import {createStore, combineReducers} from 'redux';
 import { Dishes } from './dishes';
