@@ -28,7 +28,7 @@ const minLength = (len) => (val) => val && (val.length >= len);
         }
     }
 
-    function RenderComments({comments}) {
+    function RenderComments({comments, addComment, dishId}) {
       if(comments != null) {
         return (
             <div className="col-12 col-md-5 m-1">
@@ -74,8 +74,9 @@ const minLength = (len) => (val) => val && (val.length >= len);
                         <RenderDish dish={props.dish} />
                     </div>
                     <div className="col-12 col-md-5 m-1">
-                        <RenderComments comments={props.comments} />
-                        <CommentForm />
+                    <RenderComments comments={props.comments} addComment={props.addComment} dishId={props.dish.id}
+                        />
+                        <CommentForm dishId={dishId} addComment={addComment} />
                     </div>
                 </div>
                 </div>
@@ -97,6 +98,7 @@ class CommentForm extends Component{
 
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.toggleModal = this.toggleModal.bind(this);
+    this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
 	}
 
 	handleSubmit(values) {
