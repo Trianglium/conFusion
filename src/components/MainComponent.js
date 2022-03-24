@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux';
+import { actions } from 'react-redux-form';
 
 import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
@@ -30,6 +31,7 @@ const mapDispatchToProps = dispatch => ({
 
     addComment: (dishId, rating, author, comment) => dispatch(addComment(dishId, rating, author, comment))
     fetchDishes: () => { dispatch(fetchDishes())}
+    resetFeedbackForm: () => { dispatch(actions.reset('feedback'))}
 
 });
 
@@ -78,7 +80,7 @@ class Main extends Component {
               <Route exact path='/aboutus' component={() => <About leaders={this.props.leaders} />} />} />
               <Route exact path='/menu' component={() => <Menu dishes={this.props.dishes} />} />
               <Route path='/menu/:dishId' component={DishWithId} />
-              <Route exact path='/contactus' component={Contact} />} />
+              <Route exact path='/contactus' component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} />} />
               <Redirect to="/home" />
           </Switch>
         </div>
