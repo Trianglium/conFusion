@@ -79,11 +79,6 @@ export const addComments = (comments) => ({
     payload: comments
 });
 
-export const addComment = (comment) => ({
-    type: ActionTypes.ADD_COMMENT,
-    payload: comment
-});
-
 export const postComment = (dishId, rating, author, comment) => (dispatch) => {
 
     const newComment = {
