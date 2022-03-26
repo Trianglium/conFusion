@@ -18,6 +18,10 @@ export const fetchDishes = () => (dispatch) => {
     setTimeout(() => {
         dispatch(addDishes(DISHES));
     }, 2000);
+    
+    return fetch(baseUrl + 'dishes')
+    .then(response => response.json())
+    .then(dishes => dispatch(addDishes(dishes)));
 }
 
 export const dishesLoading = () => ({
