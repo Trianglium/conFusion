@@ -7,3 +7,6 @@ export const PROMOS_FAILED = 'PROMOS_FAILED';
 export const DISHES_LOADING = 'DISHES_LOADING';
 export const DISHES_FAILED = 'DISHES_FAILED';
 export const ADD_DISHES = 'ADD_DISHES';
+export const LEADERS_LOADING = 'PROMOS_LOADING';
+export const ADD_LEADERS = 'ADD_LEADERS';
+export const LEADERS_FAILED = 'PROMOS_FAILED';
