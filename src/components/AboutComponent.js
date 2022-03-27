@@ -5,8 +5,18 @@ import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
 
-function RenderLeader({leader}) {
-    if(leader != null) {
+function RenderLeader({leader, isLoading, errMess}) {
+  if (isLoading) {
+      return(
+              <Loading />
+      );
+  }
+  else if (errMess) {
+      return(
+              <h4>{errMess}</h4>
+      );
+  }
+  else if(leader != null) {
       return(
         <div key={leader.id} className="col-12 mt-5">
           <Stagger in>
@@ -38,7 +48,7 @@ const About = (props) => {
     const leaders = props.leaders.map((leader) => {
         return (
           <div className="col-12" key={leader.id}>
-            <RenderLeader leader={leader} />
+            <RenderLeader leader={leader} isLoading={props.leadersLoading} errMess={props.leadersErrMess} />
           </div>
         );
     });
