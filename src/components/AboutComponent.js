@@ -16,7 +16,7 @@ function RenderLeader({leader, isLoading, errMess}) {
               <h4>{errMess}</h4>
       );
   }
-  else if(leader != null) {
+  else if (leader != null) {
       return(
         <div key={leader.id} className="col-12 mt-5">
           <Stagger in>
@@ -45,7 +45,7 @@ function RenderLeader({leader, isLoading, errMess}) {
 
 
 const About = (props) => {
-    const leaders = props.leaders.map((leader) => {
+    const leaders = props.leaders.leaders.map((leader) => {
         return (
           <div className="col-12" key={leader.id}>
             <RenderLeader leader={leader} isLoading={props.leadersLoading} errMess={props.leadersErrMess} />
