@@ -5,7 +5,7 @@ const leaderRouter = express.Router();
 
 leaderRouter.use(bodyParser.json());
 
-// leaders
+// leadership
 leaderRouter.route('/')
 .all((req,res,next) => {
     res.statusCode = 200;
