@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const dishRouter = express.Router();
 
 dishRouter.use(bodyParser.json());
+
 // dishes
 dishRouter.route('/')
 .all((req,res,next) => {
@@ -25,7 +26,8 @@ dishRouter.route('/')
     res.end('Deleting all dishes');
 });
 
-// dishes/dishId
+
+// dishId
 dishRouter.route('/:dishId')
 .all((req,res,next) => {
     res.statusCode = 200;
