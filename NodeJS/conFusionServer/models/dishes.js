@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
+require('mongoose-currency').loadType(mongoose);
 const Schema = mongoose.Schema;
+const Currency = mongoose.Types.Currency;
 
 // Comment Schema - Comments about Dishes
 var commentSchema = new Schema({
@@ -23,7 +25,7 @@ var commentSchema = new Schema({
 
 
 // Dish Schema - Dish Names and Descriptions
-var dishSchema = new Schema({
+const dishSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -32,6 +34,27 @@ var dishSchema = new Schema({
     description: {
         type: String,
         required: true
+    },
+    image: {
+        type: String,
+        required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    label: {
+        type: String,
+        default: ''
+    },
+    price: {
+        type: Currency,
+        required: true,
+        min: 0
+    },
+    featured: {
+        type: Boolean,
+        default:false
     },
     comments:[commentSchema]
 }, {
