@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
-require('mongoose-currency').loadType(mongoose);
 const Schema = mongoose.Schema;
+// Add new currency type into mongoose
+require('mongoose-currency').loadType(mongoose);
 const Currency = mongoose.Types.Currency;
 
 // Comment Schema - Comments about Dishes
