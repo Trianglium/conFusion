@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-// Integrate Models
+// Integrate Dishes Schema
 const Dishes = require('../models/dishes');
 
 const dishRouter = express.Router();
