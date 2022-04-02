@@ -5,14 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
+
+
 var passport = require('passport');
 var authenticate = require('./authenticate');
 var config = require('./config');
 
+// Routers
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
-// Add Routers
 var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
@@ -20,9 +21,11 @@ var leaderRouter = require('./routes/leaderRouter');
 // Connect to MongoDB Server
 const mongoose = require('mongoose');
 
+// Models schema
 const Dishes = require('./models/dishes');
 const Promotions = require('./models/promotions');
 const Leaders = require('./models/leaders');
+const Users = require('./models/user');
 
 //const url = 'mongodb://localhost:27017/conFusion';
 const url = config.mongoUrl;
