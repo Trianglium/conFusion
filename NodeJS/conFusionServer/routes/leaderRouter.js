@@ -7,6 +7,8 @@ const Leaders = require('../models/leaders');
 
 const leaderRouter = express.Router();
 
+var authenticate = require('../authenticate');
+
 leaderRouter.use(bodyParser.json());
 
 leaderRouter.route('/')

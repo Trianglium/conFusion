@@ -7,6 +7,8 @@ const Promotions = require('../models/promotions');
 
 const promoRouter = express.Router();
 
+var authenticate = require('../authenticate');
+
 promoRouter.use(bodyParser.json());
 
 promoRouter.route('/')
