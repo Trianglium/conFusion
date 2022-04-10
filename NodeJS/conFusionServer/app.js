@@ -6,7 +6,11 @@ var logger = require('morgan');
 var session = require('express-session');
 var FileStore = require('session-file-store')(session);
 
+// Swagger API Docs
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
+// Authentication
 var passport = require('passport');
 var authenticate = require('./authenticate');
 var config = require('./config');
@@ -27,7 +31,7 @@ const Promotions = require('./models/promotions');
 const Leaders = require('./models/leaders');
 const Users = require('./models/user');
 
-// Establish connection to MongoDB 
+// Establish connection to MongoDB
 const url = config.mongoUrl;
 const connect = mongoose.connect(url);
 
@@ -63,12 +67,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Routers
+// main auth and app routes (most basic)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// Add Routers from node-express app
+
+// Resturant endpoints
 app.use('/dishes',dishRouter);
 app.use('/promotions',promoRouter);
 app.use('/leaders',leaderRouter);
+
+// swagger documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
