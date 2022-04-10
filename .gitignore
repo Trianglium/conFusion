@@ -23,6 +23,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# database 
+# database
 /mongodb/data
 
+conFusionServer/bin/cert.csr
+conFusionServer/bin/certificate.pem
+conFusionServer/bin/private.key
