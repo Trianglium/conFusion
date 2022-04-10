@@ -27,7 +27,7 @@ const Promotions = require('./models/promotions');
 const Leaders = require('./models/leaders');
 const Users = require('./models/user');
 
-//const url = 'mongodb://localhost:27017/conFusion';
+// Establish connection to MongoDB 
 const url = config.mongoUrl;
 const connect = mongoose.connect(url);
 
@@ -36,6 +36,19 @@ connect.then((db) => {
 }, (err) => { console.log(err); });
 
 var app = express();
+
+// Secure traffic only
+// redirect all traffic going to port 3000 to secure port
+app.all('*', (req, res, next) => {
+  if (req.secure) {
+    return next();
+  }
+  else {
+    res.redirect(307, 'https://' + req.hostname + ':' + app.get('secPort') + req.url);
+  }
+});
+
+
 
 app.use(passport.initialize());
 app.use(passport.session());
