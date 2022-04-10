@@ -35,6 +35,7 @@ dishRouter.route('/')
     res.end('PUT operation not supported on /dishes');
 })
 .delete(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+    console.log('Deleting: ', req);
     Dishes.remove({})
     .then((resp) => {
         res.statusCode = 200;
@@ -49,6 +50,7 @@ dishRouter.route('/:dishId')
     Dishes.findById(req.params.dishId)
     .populate('comments.author')
     .then((dish) => {
+        console.log('Get dish specified by id: ', req.params.dishId);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(dish);
@@ -153,6 +155,7 @@ dishRouter.route('/:dishId/comments/:commentId')
     .populate('comments.author')
     .then((dish) => {
         if (dish != null && dish.comments.id(req.params.commentId) != null) {
+            console.log('Get comment specified by id: ', dish.comments.id(req.params.commendId));
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
             res.json(dish.comments.id(req.params.commentId));
@@ -178,8 +181,9 @@ dishRouter.route('/:dishId/comments/:commentId')
 .put(authenticate.verifyUser, (req, res, next) => {
     Dishes.findById(req.params.dishId)
     .then((dish) => {
-        if (dish != null && dish.comments.id(req.params.commentId) != null
-            && dish.comments.id(req.params.commentId).author.equals(req.user._id)) {
+        commentId
+        if (dish != null && dish.comments.id(req.params.commentId) != null && dish.comments.id(req.params.commentId).author.equals(req.user._id)) {
+            console.log('Edit or change comments on dish: ', dish);
             if (req.body.rating) {
                 dish.comments.id(req.params.commentId).rating = req.body.rating;
             }
@@ -188,6 +192,7 @@ dishRouter.route('/:dishId/comments/:commentId')
             }
             dish.save()
             .then((dish) => {
+                console.log('Update Dish Details: ', dish);
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
                 res.json(dish);
@@ -216,6 +221,7 @@ dishRouter.route('/:dishId/comments/:commentId')
     .then((dish) => {
         if (dish != null && dish.comments.id(req.params.commentId) != null
             && dish.comments.id(req.params.commentId).author.equals(req.user._id)) {
+            console.log("Deleting: ", dish.comments.id(req.params.commentId));
             dish.comments.id(req.params.commentId).remove();
             dish.save()
             .then((dish) => {
