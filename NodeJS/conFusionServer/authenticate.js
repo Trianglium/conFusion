@@ -1,20 +1,16 @@
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var User = require('./models/user');
-
 var JwtStrategy = require('passport-jwt').Strategy;
 var ExtractJwt = require('passport-jwt').ExtractJwt;
-var jwt = require('jsonwebtoken');
+var jwt = require('jsonwebtoken'); // used to create, sign, and verify tokens
 
 var config = require('./config.js');
 
-// Passport
-passport.use(new LocalStrategy(User.authenticate()));
+exports.local = passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
-// JWT
 exports.getToken = function(user) {
     return jwt.sign(user, config.secretKey,
         {expiresIn: 3600});
@@ -40,16 +36,20 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts,
         });
     }));
 
-
-
 exports.verifyUser = passport.authenticate('jwt', {session: false});
 
-exports.verifyAdmin = (req, res, next) => {
-  if (!req.user.admin){
-    var err = new Error('Forbidden. Admin privilage required.');
-    err.status = 403;
-    next(err);
-  } else {
-    next();
-  }
+exports.verifyAdmin = function(req, res, next) {
+    User.findOne({_id: req.user._id})
+    .then((user) => {
+        console.log("User: ", req.user);
+        if (user.admin) {
+            next();
+        }
+        else {
+            err = new Error('You are not authorized to perform this operation!');
+            err.status = 403;
+            return next(err);
+        }
+    }, (err) => next(err))
+    .catch((err) => next(err))
 }
