@@ -1,0 +1,2238 @@
+{
+	"info": {
+		"_postman_id": "1227027e-7f58-4a46-838c-27c14b80beae",
+		"name": "conFusion",
+		"description": "Ristorante con Fusion's REST API can be used to retrieve data about dishes, leaders, promotions and users.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Dishes",
+			"item": [
+				{
+					"name": "List all dishes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{dishes}}"
+					},
+					"response": [
+						{
+							"name": "Get all dishes example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ["label": "", "featured": false, "_id": "62430b45afcf2f0610a7b23d", "name": "ElaiCheese Cake", "image": "images/elaicheesecake.png", "category": "dessert", "price": 299, "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms", "comments": [    {               "_id": "62430b45afcf2f0610a7b242",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:36:05.359Z",                "updatedAt": "2022-03-29T13:36:05.359Z"            },            {               "_id": "62430b45afcf2f0610a7b241",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            },            {               "_id": "62430b45afcf2f0610a7b240",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            },            {               "_id": "62430b45afcf2f0610a7b23f",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            },            {               "_id": "62430b45afcf2f0610a7b23e",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            }        ], "createdAt": "2022-03-29T13:36:05.362Z", "updatedAt": "2022-03-29T13:36:05.362Z", "__v": 0    },    "label": "New", "featured": false, "_id": "62430b96afcf2f0610a7b243", "name": "Vadonut", "image": "images/vadonut.png", "category": "appetizer", "price": 199, "description": "A quintessential ConFusion experience, is it a vada or is it a donut?", "comments": [    {               "_id": "62430b96afcf2f0610a7b248",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:37:26.662Z",                "updatedAt": "2022-03-29T13:37:26.662Z"            },            {               "_id": "62430b96afcf2f0610a7b247",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:37:26.662Z",                "updatedAt": "2022-03-29T13:37:26.662Z"            },            {               "_id": "62430b96afcf2f0610a7b246",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:37:26.663Z",                "updatedAt": "2022-03-29T13:37:26.663Z"            },            {               "_id": "62430b96afcf2f0610a7b245",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:37:26.663Z",                "updatedAt": "2022-03-29T13:37:26.663Z"            },            {               "_id": "62430b96afcf2f0610a7b244",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:37:26.663Z",                "updatedAt": "2022-03-29T13:37:26.663Z"            }        ], "createdAt": "2022-03-29T13:37:26.663Z", "updatedAt": "2022-03-29T13:37:26.663Z", "__v": 0    },    "label": "", "featured": false, "_id": "62430e47afcf2f0610a7b24a", "name": "Zucchipakoda", "image": "images/zucchipakoda.png", "category": "appetizer", "price": 199, "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce", "comments": [    {               "_id": "62430e47afcf2f0610a7b24f",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {               "_id": "62430e47afcf2f0610a7b24e",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {               "_id": "62430e47afcf2f0610a7b24d",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {               "_id": "62430e47afcf2f0610a7b24c",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {               "_id": "62430e47afcf2f0610a7b24b",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            }        ], "createdAt": "2022-03-29T13:48:55.010Z", "updatedAt": "2022-03-29T13:48:55.010Z", "__v": 0    },    "label": "Hot", "featured": true, "_id": "62430e90afcf2f0610a7b250", "name": "Uthappizza", "image": "images/uthappizza.png", "category": "mains", "price": 499, "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.", "comments": [    {               "_id": "62430e90afcf2f0610a7b255",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:50:08.865Z",                "updatedAt": "2022-03-29T13:50:08.865Z"            },            {               "_id": "62430e90afcf2f0610a7b254",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            },            {               "_id": "62430e90afcf2f0610a7b253",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            },            {               "_id": "62430e90afcf2f0610a7b252",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            },            {               "_id": "62430e90afcf2f0610a7b251",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            }        ], "createdAt": "2022-03-29T13:50:08.868Z", "updatedAt": "2022-03-29T13:50:08.868Z", "__v": 0    }],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/dishes"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5580"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"15cc-medNUsB/JWn9cB9Qw2IqtR1XYl0""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 29 Mar 2022 13:51:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "label": "",        "featured": false,        "_id": "62430b45afcf2f0610a7b23d",        "name": "ElaiCheese Cake",        "image": "images/elaicheesecake.png",        "category": "dessert",        "price": 299,        "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms",        "comments": [            {                "_id": "62430b45afcf2f0610a7b242",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:36:05.359Z",                "updatedAt": "2022-03-29T13:36:05.359Z"            },            {                "_id": "62430b45afcf2f0610a7b241",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            },            {                "_id": "62430b45afcf2f0610a7b240",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            },            {                "_id": "62430b45afcf2f0610a7b23f",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            },            {                "_id": "62430b45afcf2f0610a7b23e",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:36:05.360Z",                "updatedAt": "2022-03-29T13:36:05.360Z"            }        ],        "createdAt": "2022-03-29T13:36:05.362Z",        "updatedAt": "2022-03-29T13:36:05.362Z",        "__v": 0    },    {        "label": "New",        "featured": false,        "_id": "62430b96afcf2f0610a7b243",        "name": "Vadonut",        "image": "images/vadonut.png",        "category": "appetizer",        "price": 199,        "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",        "comments": [            {                "_id": "62430b96afcf2f0610a7b248",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:37:26.662Z",                "updatedAt": "2022-03-29T13:37:26.662Z"            },            {                "_id": "62430b96afcf2f0610a7b247",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:37:26.662Z",                "updatedAt": "2022-03-29T13:37:26.662Z"            },            {                "_id": "62430b96afcf2f0610a7b246",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:37:26.663Z",                "updatedAt": "2022-03-29T13:37:26.663Z"            },            {                "_id": "62430b96afcf2f0610a7b245",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:37:26.663Z",                "updatedAt": "2022-03-29T13:37:26.663Z"            },            {                "_id": "62430b96afcf2f0610a7b244",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:37:26.663Z",                "updatedAt": "2022-03-29T13:37:26.663Z"            }        ],        "createdAt": "2022-03-29T13:37:26.663Z",        "updatedAt": "2022-03-29T13:37:26.663Z",        "__v": 0    },    {        "label": "",        "featured": false,        "_id": "62430e47afcf2f0610a7b24a",        "name": "Zucchipakoda",        "image": "images/zucchipakoda.png",        "category": "appetizer",        "price": 199,        "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",        "comments": [            {                "_id": "62430e47afcf2f0610a7b24f",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {                "_id": "62430e47afcf2f0610a7b24e",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {                "_id": "62430e47afcf2f0610a7b24d",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {                "_id": "62430e47afcf2f0610a7b24c",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            },            {                "_id": "62430e47afcf2f0610a7b24b",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:48:55.009Z",                "updatedAt": "2022-03-29T13:48:55.009Z"            }        ],        "createdAt": "2022-03-29T13:48:55.010Z",        "updatedAt": "2022-03-29T13:48:55.010Z",        "__v": 0    },    {        "label": "Hot",        "featured": true,        "_id": "62430e90afcf2f0610a7b250",        "name": "Uthappizza",        "image": "images/uthappizza.png",        "category": "mains",        "price": 499,        "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",        "comments": [            {                "_id": "62430e90afcf2f0610a7b255",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": "John Lemon",                "createdAt": "2022-03-29T13:50:08.865Z",                "updatedAt": "2022-03-29T13:50:08.865Z"            },            {                "_id": "62430e90afcf2f0610a7b254",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": "Paul McVites",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            },            {                "_id": "62430e90afcf2f0610a7b253",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": "Michael Jaikishan",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            },            {                "_id": "62430e90afcf2f0610a7b252",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": "Ringo Starry",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            },            {                "_id": "62430e90afcf2f0610a7b251",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": "25 Cent",                "createdAt": "2022-03-29T13:50:08.866Z",                "updatedAt": "2022-03-29T13:50:08.866Z"            }        ],        "createdAt": "2022-03-29T13:50:08.868Z",        "updatedAt": "2022-03-29T13:50:08.868Z",        "__v": 0    }]
+						},
+						{
+							"name": "List all dishes example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{dishes}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "6387"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"18f3-Uv0TJW5xe9Br4aCOwEGUACMl5mw""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:42:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "label": "New",        "featured": false,        "_id": "6252f3cbeff8358e9c903bec",        "name": "Vadonut",        "image": "images/vadonut.png",        "category": "appetizer",        "price": 199,        "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",        "comments": [            {                "_id": "6252f3cbeff8358e9c903bed",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:12:11.615Z",                "updatedAt": "2022-04-10T15:12:11.615Z"            }        ],        "createdAt": "2022-04-10T15:12:11.616Z",        "updatedAt": "2022-04-10T15:12:11.616Z",        "__v": 0    },    {        "label": "",        "featured": false,        "_id": "6252f529eff8358e9c903bee",        "name": "ElaiCheese Cake",        "image": "images/elaicheesecake.png",        "category": "dessert",        "price": 299,        "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms",        "comments": [            {                "_id": "6252f529eff8358e9c903bf3",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": {                    "firstname": "John",                    "lastname": "Lemon",                    "admin": false,                    "_id": "6252f129eff8358e9c903be9",                    "username": "John Lemon",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bf2",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bf1",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": {                    "firstname": "Michael",                    "lastname": "Jaikishan",                    "admin": false,                    "_id": "6252f0dfeff8358e9c903be8",                    "username": "Michael Jaikishan",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bf0",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": {                    "firstname": "Ringo",                    "lastname": "Starry",                    "admin": false,                    "_id": "6252e878b09e3ba28c27f141",                    "username": "Ringo Starry",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bef",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": {                    "firstname": "25",                    "lastname": "Cent",                    "admin": false,                    "_id": "6252f153eff8358e9c903bea",                    "username": "25 Cent",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            }        ],        "createdAt": "2022-04-10T15:18:01.816Z",        "updatedAt": "2022-04-10T15:18:01.816Z",        "__v": 0    },    {        "label": "",        "featured": false,        "_id": "6252f588eff8358e9c903bf4",        "name": "Zucchipakoda",        "image": "images/zucchipakoda.png",        "category": "appetizer",        "price": 199,        "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",        "comments": [            {                "_id": "6252f588eff8358e9c903bf9",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": {                    "firstname": "John",                    "lastname": "Lemon",                    "admin": false,                    "_id": "6252f129eff8358e9c903be9",                    "username": "John Lemon",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf8",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf7",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": {                    "firstname": "Michael",                    "lastname": "Jaikishan",                    "admin": false,                    "_id": "6252f0dfeff8358e9c903be8",                    "username": "Michael Jaikishan",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf6",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": {                    "firstname": "Ringo",                    "lastname": "Starry",                    "admin": false,                    "_id": "6252e878b09e3ba28c27f141",                    "username": "Ringo Starry",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf5",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": {                    "firstname": "25",                    "lastname": "Cent",                    "admin": false,                    "_id": "6252f153eff8358e9c903bea",                    "username": "25 Cent",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            }        ],        "createdAt": "2022-04-10T15:19:36.844Z",        "updatedAt": "2022-04-10T15:19:36.844Z",        "__v": 0    },    {        "label": "Hot",        "featured": true,        "_id": "6252f625eff8358e9c903bfa",        "name": "Uthappizza",        "image": "images/uthappizza.png",        "category": "mains",        "price": 499,        "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",        "comments": [            {                "_id": "6252f625eff8358e9c903bff",                "rating": 5,                "comment": "pizza :)",                "author": {                    "firstname": "John",                    "lastname": "Lemon",                    "admin": false,                    "_id": "6252f129eff8358e9c903be9",                    "username": "John Lemon",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfe",                "rating": 4,                "comment": "I never give anyone 5 stars",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfd",                "rating": 5,                "comment": "pizza is life",                "author": {                    "firstname": "Michael",                    "lastname": "Jaikishan",                    "admin": false,                    "_id": "6252f0dfeff8358e9c903be8",                    "username": "Michael Jaikishan",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfc",                "rating": 4,                "comment": "pizza and chill",                "author": {                    "firstname": "Ringo",                    "lastname": "Starry",                    "admin": false,                    "_id": "6252e878b09e3ba28c27f141",                    "username": "Ringo Starry",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfb",                "rating": 2,                "comment": "cheap af",                "author": {                    "firstname": "25",                    "lastname": "Cent",                    "admin": false,                    "_id": "6252f153eff8358e9c903bea",                    "username": "25 Cent",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            }        ],        "createdAt": "2022-04-10T15:22:13.573Z",        "updatedAt": "2022-04-10T15:22:13.573Z",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Delete all dishes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjUyYzBlYjU0ZGNkNDkzYzhhZjE1N2IiLCJpYXQiOjE2NDk1OTA1NTQsImV4cCI6MTY0OTU5NDE1NH0.0pQfijTYOB83mpGsLUhJs4nixxRl_JkMa3ujyfSV4wA"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{dishes}}"
+					},
+					"response": [
+						{
+							"name": "dishes/",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{base_url}}dishes/"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Get a single dish",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   "_id": "6252f3cbeff8358e9c903bec"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{dishes}}/"
+					},
+					"response": [
+						{
+							"name": "Retrieve details about dish specified by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   "_id": "6252f3cbeff8358e9c903bec"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:3443/dishes/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "6387"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"18f3-Uv0TJW5xe9Br4aCOwEGUACMl5mw""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:45:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "label": "New",        "featured": false,        "_id": "6252f3cbeff8358e9c903bec",        "name": "Vadonut",        "image": "images/vadonut.png",        "category": "appetizer",        "price": 199,        "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",        "comments": [            {                "_id": "6252f3cbeff8358e9c903bed",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:12:11.615Z",                "updatedAt": "2022-04-10T15:12:11.615Z"            }        ],        "createdAt": "2022-04-10T15:12:11.616Z",        "updatedAt": "2022-04-10T15:12:11.616Z",        "__v": 0    },    {        "label": "",        "featured": false,        "_id": "6252f529eff8358e9c903bee",        "name": "ElaiCheese Cake",        "image": "images/elaicheesecake.png",        "category": "dessert",        "price": 299,        "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms",        "comments": [            {                "_id": "6252f529eff8358e9c903bf3",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": {                    "firstname": "John",                    "lastname": "Lemon",                    "admin": false,                    "_id": "6252f129eff8358e9c903be9",                    "username": "John Lemon",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bf2",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bf1",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": {                    "firstname": "Michael",                    "lastname": "Jaikishan",                    "admin": false,                    "_id": "6252f0dfeff8358e9c903be8",                    "username": "Michael Jaikishan",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bf0",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": {                    "firstname": "Ringo",                    "lastname": "Starry",                    "admin": false,                    "_id": "6252e878b09e3ba28c27f141",                    "username": "Ringo Starry",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            },            {                "_id": "6252f529eff8358e9c903bef",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": {                    "firstname": "25",                    "lastname": "Cent",                    "admin": false,                    "_id": "6252f153eff8358e9c903bea",                    "username": "25 Cent",                    "__v": 0                },                "createdAt": "2022-04-10T15:18:01.816Z",                "updatedAt": "2022-04-10T15:18:01.816Z"            }        ],        "createdAt": "2022-04-10T15:18:01.816Z",        "updatedAt": "2022-04-10T15:18:01.816Z",        "__v": 0    },    {        "label": "",        "featured": false,        "_id": "6252f588eff8358e9c903bf4",        "name": "Zucchipakoda",        "image": "images/zucchipakoda.png",        "category": "appetizer",        "price": 199,        "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",        "comments": [            {                "_id": "6252f588eff8358e9c903bf9",                "rating": 5,                "comment": "Imagine all the eatables, living in conFusion!",                "author": {                    "firstname": "John",                    "lastname": "Lemon",                    "admin": false,                    "_id": "6252f129eff8358e9c903be9",                    "username": "John Lemon",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf8",                "rating": 4,                "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf7",                "rating": 3,                "comment": "Eat it, just eat it!",                "author": {                    "firstname": "Michael",                    "lastname": "Jaikishan",                    "admin": false,                    "_id": "6252f0dfeff8358e9c903be8",                    "username": "Michael Jaikishan",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf6",                "rating": 4,                "comment": "Ultimate, Reaching for the stars!",                "author": {                    "firstname": "Ringo",                    "lastname": "Starry",                    "admin": false,                    "_id": "6252e878b09e3ba28c27f141",                    "username": "Ringo Starry",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            },            {                "_id": "6252f588eff8358e9c903bf5",                "rating": 2,                "comment": "It's your birthday, we're gonna party!",                "author": {                    "firstname": "25",                    "lastname": "Cent",                    "admin": false,                    "_id": "6252f153eff8358e9c903bea",                    "username": "25 Cent",                    "__v": 0                },                "createdAt": "2022-04-10T15:19:36.844Z",                "updatedAt": "2022-04-10T15:19:36.844Z"            }        ],        "createdAt": "2022-04-10T15:19:36.844Z",        "updatedAt": "2022-04-10T15:19:36.844Z",        "__v": 0    },    {        "label": "Hot",        "featured": true,        "_id": "6252f625eff8358e9c903bfa",        "name": "Uthappizza",        "image": "images/uthappizza.png",        "category": "mains",        "price": 499,        "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",        "comments": [            {                "_id": "6252f625eff8358e9c903bff",                "rating": 5,                "comment": "pizza :)",                "author": {                    "firstname": "John",                    "lastname": "Lemon",                    "admin": false,                    "_id": "6252f129eff8358e9c903be9",                    "username": "John Lemon",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfe",                "rating": 4,                "comment": "I never give anyone 5 stars",                "author": {                    "firstname": "Paul",                    "lastname": "McVites",                    "admin": false,                    "_id": "6252f1f4eff8358e9c903beb",                    "username": "Paul McVites",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfd",                "rating": 5,                "comment": "pizza is life",                "author": {                    "firstname": "Michael",                    "lastname": "Jaikishan",                    "admin": false,                    "_id": "6252f0dfeff8358e9c903be8",                    "username": "Michael Jaikishan",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfc",                "rating": 4,                "comment": "pizza and chill",                "author": {                    "firstname": "Ringo",                    "lastname": "Starry",                    "admin": false,                    "_id": "6252e878b09e3ba28c27f141",                    "username": "Ringo Starry",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            },            {                "_id": "6252f625eff8358e9c903bfb",                "rating": 2,                "comment": "cheap af",                "author": {                    "firstname": "25",                    "lastname": "Cent",                    "admin": false,                    "_id": "6252f153eff8358e9c903bea",                    "username": "25 Cent",                    "__v": 0                },                "createdAt": "2022-04-10T15:22:13.573Z",                "updatedAt": "2022-04-10T15:22:13.573Z"            }        ],        "createdAt": "2022-04-10T15:22:13.573Z",        "updatedAt": "2022-04-10T15:22:13.573Z",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Post a dish",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  "name": "Uthappizza",    "image": "images/uthappizza.png",    "category": "mains",    "label": "Hot",    "price": "4.99",    "featured": "true",    "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",    "comments": [{         "rating": 5,          "comment": "pizza :)",          "author": "6252f129eff8358e9c903be9",          "date": "2022-10-16T17:57:28.556094Z"        },        {         "rating": 4,          "comment": "I never give anyone 5 stars",          "author": "6252f1f4eff8358e9c903beb",          "date": "2021-09-05T17:57:28.556094Z"        },        {         "rating": 5,          "comment": "pizza is life",          "author": "6252f0dfeff8358e9c903be8",          "date": "2020-02-13T17:57:28.556094Z"        },        {         "rating": 4,          "comment": "pizza and chill",          "author": "6252e878b09e3ba28c27f141",          "date": "2019-12-02T17:57:28.556094Z"        },        {         "rating": 2,          "comment": "cheap af",          "author": "6252f153eff8358e9c903bea",          "date": "2011-11-11T11:11:28.556094Z"        }    ]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{ssl_url}}{{dishes}}"
+					},
+					"response": [
+						{
+							"name": "Post a dish with embedded comments",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     "name": "Vadonut",      "image": "images/vadonut.png",      "category": "appetizer",      "label": "New",      "price": "1.99",      "featured": "false",      "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",      "comments": [  {             "rating": 4,              "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",              "author": "6252f1f4eff8358e9c903beb"          }      ]}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:3443/dishes"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "574"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"23e-JhbXpB+DaDbYGooEsIE6zNnHUcU""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 15:12:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{    "label": "New",    "featured": false,    "_id": "6252f3cbeff8358e9c903bec",    "name": "Vadonut",    "image": "images/vadonut.png",    "category": "appetizer",    "price": 199,    "description": "A quintessential ConFusion experience, is it a vada or is it a donut?",    "comments": [        {            "_id": "6252f3cbeff8358e9c903bed",            "rating": 4,            "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",            "author": "6252f1f4eff8358e9c903beb",            "createdAt": "2022-04-10T15:12:11.615Z",            "updatedAt": "2022-04-10T15:12:11.615Z"        }    ],    "createdAt": "2022-04-10T15:12:11.616Z",    "updatedAt": "2022-04-10T15:12:11.616Z",    "__v": 0}"
+						}
+					]
+				},
+				{
+					"name": "List all comments on a dish specified by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dishes}}/:dishId/comments",
+							"host": [
+								"{{dishes}}"
+							],
+							"path": [
+								":dishId",
+								"comments"
+							],
+							"variable": [
+								{
+									"key": "dishId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove all comments on a dish specified by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dishes}}/:dishId/comments",
+							"host": [
+								"{{dishes}}"
+							],
+							"path": [
+								":dishId",
+								"comments"
+							],
+							"variable": [
+								{
+									"key": "dishId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve details about a specific comment on a specific dish",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{dishes}}/:dishId/comments/:commentId",
+							"host": [
+								"{{dishes}}"
+							],
+							"path": [
+								":dishId",
+								"comments",
+								":commentId"
+							],
+							"variable": [
+								{
+									"key": "dishId",
+									"value": null
+								},
+								{
+									"key": "commentId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update one's own comment on a paticular dish",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{dishes}}/:dishId/comments/:commentId",
+							"host": [
+								"{{dishes}}"
+							],
+							"path": [
+								":dishId",
+								"comments",
+								":commentId"
+							],
+							"variable": [
+								{
+									"key": "dishId",
+									"value": null
+								},
+								{
+									"key": "commentId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove one's own comment on a paticular dish Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{dishes}}/:dishId/comments/:commentId",
+							"host": [
+								"{{dishes}}"
+							],
+							"path": [
+								":dishId",
+								"comments",
+								":commentId"
+							],
+							"variable": [
+								{
+									"key": "dishId",
+									"value": null
+								},
+								{
+									"key": "commentId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Data on dishes available at Ristorante con Fusion",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Promotions",
+			"item": [
+				{
+					"name": "Get all promos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{promotions}}"
+					},
+					"response": [
+						{
+							"name": "List all promotions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://localhost:3443/promotions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "377"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"179-X3dmebaI4dIO7e0Xfu+VWrjHZdc""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:46:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "label": "New",        "featured": true,        "_id": "6243e44088a60c40640d10f6",        "name": "Weekend Grand Buffet",        "image": "images/buffet.png",        "price": 1999,        "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person ",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Delete all promos",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{promotions}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specified promo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   "_id": "6243e44088a60c40640d10f6",}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{promotions}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Post single promo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     "name": "Weekend Grand Buffet",      "image": "images/buffet.png",      "label": "New",      "price": "19.99",      "featured": "true",      "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person "    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{promotions}}"
+					},
+					"response": [
+						{
+							"name": "Post single promo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     "name": "Weekend Grand Buffet",      "image": "images/buffet.png",      "label": "New",      "price": "19.99",      "featured": "true",      "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person "    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:3443/promotions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "375"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"177-n4WV7XOP04KM643ViR5Pmaz/Kso""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 30 Mar 2022 05:01:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{    "label": "New",    "featured": true,    "_id": "6243e44088a60c40640d10f6",    "name": "Weekend Grand Buffet",    "image": "images/buffet.png",    "price": 1999,    "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person ",    "__v": 0}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve details on a specific promotion",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   "_id": "6243e44088a60c40640d10f6"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{promotions}}"
+					},
+					"response": [
+						{
+							"name": "Retrieve details on a promotion specified by Id example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   "_id": "6243e44088a60c40640d10f6"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:3443/promotions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "377"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"179-X3dmebaI4dIO7e0Xfu+VWrjHZdc""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:48:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "label": "New",        "featured": true,        "_id": "6243e44088a60c40640d10f6",        "name": "Weekend Grand Buffet",        "image": "images/buffet.png",        "price": 1999,        "description": "Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person ",        "__v": 0    }]
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Leaders",
+			"item": [
+				{
+					"name": "List all leaders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{leaders}}"
+					},
+					"response": [
+						{
+							"name": "List all leaders example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://localhost:3443/leaders"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"8a2-fu869PaW5y5VbVpLZjpUbbOSxrc""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:49:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "abbr": "CEO",        "featured": false,        "_id": "6243e4f988a60c40640d10f7",        "name": "Peter Pan",        "image": "images/alberto.png",        "designation": "Chief Epicurious Officer",        "description": "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.",        "__v": 0    },    {        "abbr": "CFO",        "featured": false,        "_id": "6243e50488a60c40640d10f8",        "name": "Dhanasekaran Witherspoon",        "image": "images/alberto.png",        "designation": "Chief Food Officer",        "description": "Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!",        "__v": 0    },    {        "abbr": "CTO",        "featured": false,        "_id": "6243e52288a60c40640d10f9",        "name": "Agumbe Tang",        "image": "images/alberto.png",        "designation": "Chief Taste Officer",        "description": "Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick.",        "__v": 0    },    {        "abbr": "EC",        "featured": true,        "_id": "6243e53488a60c40640d10fa",        "name": "Alberto Somayya",        "image": "images/alberto.png",        "designation": "Executive Chef",        "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Delete all leaders",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{leaders}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete specified leader",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   "_id": "62532ef3950b29b7eca27aa9"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{leaders}}"
+					},
+					"response": [
+						{
+							"name": "Delete specified leader as an authorized user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   "_id": "62532ef3950b29b7eca27aa9"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:3443/leaders"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:25:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Delete specified leader as an admin user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   "_id": "62532ef3950b29b7eca27aa9"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{leaders}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "14"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"e-4jchTEfho5+2aBC1nSDJLiJfiKc""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:26:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{    "n": 5,    "ok": 1}"
+						}
+					]
+				},
+				{
+					"name": "Post single leader",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     "name": "Luke Skywalker",      "image": "images/luke-skywalker.png",      "designation": "Jedi Master",      "abbr": "Jedi",      "featured": "false",      "description": "a Force-sensitive human male, was a legendary Jedi Master who fought in the Galactic Civil War during the reign of the Galactic Empire. Along with his companions, Princess Leia Organa and General Han Solo, Skywalker served as a revolutionary on the side of the Alliance to Restore the Republic—an organization committed to the downfall of the Galactic Empire and the restoration of democracy. Following the war, Skywalker became a living legend, and was remembered as one of the greatest Jedi in galactic history."    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{leaders}}"
+					},
+					"response": [
+						{
+							"name": "Post single leader unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     "name": "Luke Skywalker",      "image": "images/luke-skywalker.png",      "designation": "Jedi Master",      "abbr": "Jedi",      "featured": "false",      "description": "a Force-sensitive human male, was a legendary Jedi Master who fought in the Galactic Civil War during the reign of the Galactic Empire. Along with his companions, Princess Leia Organa and General Han Solo, Skywalker served as a revolutionary on the side of the Alliance to Restore the Republic—an organization committed to the downfall of the Galactic Empire and the restoration of democracy. Following the war, Skywalker became a living legend, and was remembered as one of the greatest Jedi in galactic history."    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://localhost:3443/leaders"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:52:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Post single leader as an admin user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{     "name": "Luke Skywalker",      "image": "images/luke-skywalker.png",      "designation": "Jedi Master",      "abbr": "Jedi",      "featured": "false",      "description": "a Force-sensitive human male, was a legendary Jedi Master who fought in the Galactic Civil War during the reign of the Galactic Empire. Along with his companions, Princess Leia Organa and General Han Solo, Skywalker served as a revolutionary on the side of the Alliance to Restore the Republic—an organization committed to the downfall of the Galactic Empire and the restoration of democracy. Following the war, Skywalker became a living legend, and was remembered as one of the greatest Jedi in galactic history."    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{leaders}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "693"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"2b5-Yg4kzVdLnCOlfpSb4xKG1SvO+l8""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:24:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{    "abbr": "Jedi",    "featured": false,    "_id": "62532ef3950b29b7eca27aa9",    "name": "Luke Skywalker",    "image": "images/luke-skywalker.png",    "designation": "Jedi Master",    "description": "a Force-sensitive human male, was a legendary Jedi Master who fought in the Galactic Civil War during the reign of the Galactic Empire. Along with his companions, Princess Leia Organa and General Han Solo, Skywalker served as a revolutionary on the side of the Alliance to Restore the Republic—an organization committed to the downfall of the Galactic Empire and the restoration of democracy. Following the war, Skywalker became a living legend, and was remembered as one of the greatest Jedi in galactic history.",    "__v": 0}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "/UserId",
+					"item": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   "username": "Paul McVites",    "password": "mcvitespaul"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{users}}/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "List all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{users}}",
+							"host": [
+								"{{users}}"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all users without admin privileges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:3443/users",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "3443",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:59:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Logged in admin listing all users example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users}}",
+									"host": [
+										"{{users}}"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "981"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"3d5-2PVuPgpv4i31kAe5VVzuib4ZHPY""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:22:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "firstname": "jordan",        "lastname": "br",        "admin": false,        "_id": "625223daa09dbc22ac270574",        "username": "trianglium",        "__v": 0    },    {        "firstname": "J",        "lastname": "AdminJ",        "admin": true,        "_id": "6252bdf8f436c651cdddb0bd",        "username": "jbr",        "password": "admin123"    },    {        "firstname": "jordan",        "lastname": "brockerrudow",        "admin": true,        "_id": "6252c0eb54dcd493c8af157b",        "username": "adminjordan",        "__v": 0    },    {        "firstname": "Ringo",        "lastname": "Starry",        "admin": false,        "_id": "6252e878b09e3ba28c27f141",        "username": "Ringo Starry",        "__v": 0    },    {        "firstname": "Michael",        "lastname": "Jaikishan",        "admin": false,        "_id": "6252f0dfeff8358e9c903be8",        "username": "Michael Jaikishan",        "__v": 0    },    {        "firstname": "John",        "lastname": "Lemon",        "admin": false,        "_id": "6252f129eff8358e9c903be9",        "username": "John Lemon",        "__v": 0    },    {        "firstname": "25",        "lastname": "Cent",        "admin": false,        "_id": "6252f153eff8358e9c903bea",        "username": "25 Cent",        "__v": 0    },    {        "firstname": "Paul",        "lastname": "McVites",        "admin": false,        "_id": "6252f1f4eff8358e9c903beb",        "username": "Paul McVites",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Remove all users",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{users}}",
+							"host": [
+								"{{users}}"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all users without admin privileges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:3443/users",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "3443",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:59:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Logged in admin listing all users example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users}}",
+									"host": [
+										"{{users}}"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "981"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"3d5-2PVuPgpv4i31kAe5VVzuib4ZHPY""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:22:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "firstname": "jordan",        "lastname": "br",        "admin": false,        "_id": "625223daa09dbc22ac270574",        "username": "trianglium",        "__v": 0    },    {        "firstname": "J",        "lastname": "AdminJ",        "admin": true,        "_id": "6252bdf8f436c651cdddb0bd",        "username": "jbr",        "password": "admin123"    },    {        "firstname": "jordan",        "lastname": "brockerrudow",        "admin": true,        "_id": "6252c0eb54dcd493c8af157b",        "username": "adminjordan",        "__v": 0    },    {        "firstname": "Ringo",        "lastname": "Starry",        "admin": false,        "_id": "6252e878b09e3ba28c27f141",        "username": "Ringo Starry",        "__v": 0    },    {        "firstname": "Michael",        "lastname": "Jaikishan",        "admin": false,        "_id": "6252f0dfeff8358e9c903be8",        "username": "Michael Jaikishan",        "__v": 0    },    {        "firstname": "John",        "lastname": "Lemon",        "admin": false,        "_id": "6252f129eff8358e9c903be9",        "username": "John Lemon",        "__v": 0    },    {        "firstname": "25",        "lastname": "Cent",        "admin": false,        "_id": "6252f153eff8358e9c903bea",        "username": "25 Cent",        "__v": 0    },    {        "firstname": "Paul",        "lastname": "McVites",        "admin": false,        "_id": "6252f1f4eff8358e9c903beb",        "username": "Paul McVites",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Retrieve details about the user specified by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{users}}/:userId",
+							"host": [
+								"{{users}}"
+							],
+							"path": [
+								":userId"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all users without admin privileges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:3443/users",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "3443",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:59:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Logged in admin listing all users example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users}}",
+									"host": [
+										"{{users}}"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "981"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"3d5-2PVuPgpv4i31kAe5VVzuib4ZHPY""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:22:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "firstname": "jordan",        "lastname": "br",        "admin": false,        "_id": "625223daa09dbc22ac270574",        "username": "trianglium",        "__v": 0    },    {        "firstname": "J",        "lastname": "AdminJ",        "admin": true,        "_id": "6252bdf8f436c651cdddb0bd",        "username": "jbr",        "password": "admin123"    },    {        "firstname": "jordan",        "lastname": "brockerrudow",        "admin": true,        "_id": "6252c0eb54dcd493c8af157b",        "username": "adminjordan",        "__v": 0    },    {        "firstname": "Ringo",        "lastname": "Starry",        "admin": false,        "_id": "6252e878b09e3ba28c27f141",        "username": "Ringo Starry",        "__v": 0    },    {        "firstname": "Michael",        "lastname": "Jaikishan",        "admin": false,        "_id": "6252f0dfeff8358e9c903be8",        "username": "Michael Jaikishan",        "__v": 0    },    {        "firstname": "John",        "lastname": "Lemon",        "admin": false,        "_id": "6252f129eff8358e9c903be9",        "username": "John Lemon",        "__v": 0    },    {        "firstname": "25",        "lastname": "Cent",        "admin": false,        "_id": "6252f153eff8358e9c903bea",        "username": "25 Cent",        "__v": 0    },    {        "firstname": "Paul",        "lastname": "McVites",        "admin": false,        "_id": "6252f1f4eff8358e9c903beb",        "username": "Paul McVites",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Remove the user specified by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{users}}/:userId",
+							"host": [
+								"{{users}}"
+							],
+							"path": [
+								":userId"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all users without admin privileges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:3443/users",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "3443",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:59:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Logged in admin listing all users example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users}}",
+									"host": [
+										"{{users}}"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "981"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"3d5-2PVuPgpv4i31kAe5VVzuib4ZHPY""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:22:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "firstname": "jordan",        "lastname": "br",        "admin": false,        "_id": "625223daa09dbc22ac270574",        "username": "trianglium",        "__v": 0    },    {        "firstname": "J",        "lastname": "AdminJ",        "admin": true,        "_id": "6252bdf8f436c651cdddb0bd",        "username": "jbr",        "password": "admin123"    },    {        "firstname": "jordan",        "lastname": "brockerrudow",        "admin": true,        "_id": "6252c0eb54dcd493c8af157b",        "username": "adminjordan",        "__v": 0    },    {        "firstname": "Ringo",        "lastname": "Starry",        "admin": false,        "_id": "6252e878b09e3ba28c27f141",        "username": "Ringo Starry",        "__v": 0    },    {        "firstname": "Michael",        "lastname": "Jaikishan",        "admin": false,        "_id": "6252f0dfeff8358e9c903be8",        "username": "Michael Jaikishan",        "__v": 0    },    {        "firstname": "John",        "lastname": "Lemon",        "admin": false,        "_id": "6252f129eff8358e9c903be9",        "username": "John Lemon",        "__v": 0    },    {        "firstname": "25",        "lastname": "Cent",        "admin": false,        "_id": "6252f153eff8358e9c903bea",        "username": "25 Cent",        "__v": 0    },    {        "firstname": "Paul",        "lastname": "McVites",        "admin": false,        "_id": "6252f1f4eff8358e9c903beb",        "username": "Paul McVites",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Update or Change details about the user specified by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{users}}/:userId",
+							"host": [
+								"{{users}}"
+							],
+							"path": [
+								":userId"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all users without admin privileges",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:3443/users",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "3443",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:59:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "12"
+								}
+							],
+							"cookie": [],
+							"body": "Unauthorized"
+						},
+						{
+							"name": "Logged in admin listing all users example output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{users}}",
+									"host": [
+										"{{users}}"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "981"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"3d5-2PVuPgpv4i31kAe5VVzuib4ZHPY""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:22:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": [    {        "firstname": "jordan",        "lastname": "br",        "admin": false,        "_id": "625223daa09dbc22ac270574",        "username": "trianglium",        "__v": 0    },    {        "firstname": "J",        "lastname": "AdminJ",        "admin": true,        "_id": "6252bdf8f436c651cdddb0bd",        "username": "jbr",        "password": "admin123"    },    {        "firstname": "jordan",        "lastname": "brockerrudow",        "admin": true,        "_id": "6252c0eb54dcd493c8af157b",        "username": "adminjordan",        "__v": 0    },    {        "firstname": "Ringo",        "lastname": "Starry",        "admin": false,        "_id": "6252e878b09e3ba28c27f141",        "username": "Ringo Starry",        "__v": 0    },    {        "firstname": "Michael",        "lastname": "Jaikishan",        "admin": false,        "_id": "6252f0dfeff8358e9c903be8",        "username": "Michael Jaikishan",        "__v": 0    },    {        "firstname": "John",        "lastname": "Lemon",        "admin": false,        "_id": "6252f129eff8358e9c903be9",        "username": "John Lemon",        "__v": 0    },    {        "firstname": "25",        "lastname": "Cent",        "admin": false,        "_id": "6252f153eff8358e9c903bea",        "username": "25 Cent",        "__v": 0    },    {        "firstname": "Paul",        "lastname": "McVites",        "admin": false,        "_id": "6252f1f4eff8358e9c903beb",        "username": "Paul McVites",        "__v": 0    }]
+						}
+					]
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   "username": "Paul McVites",    "password": "mcvitespaul",    "firstname": "Paul",    "lastname": "McVites"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{users}}/signup",
+							"host": [
+								"{{users}}"
+							],
+							"path": [
+								"signup"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "Ringo Starry",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "starryringo",
+									"disabled": true
+								},
+								{
+									"key": "firstname",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "lastname",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful User Registration",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   "username": "Paul McVites",    "password": "mcvitespaul",    "firstname": "Paul",    "lastname": "McVites"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:3443https:/localhost:3443/users/signup",
+									"protocol": "https",
+									"host": [
+										"localhost:3443https"
+									],
+									"port": "",
+									"path": [
+										"",
+										"localhost:3443",
+										"users",
+										"signup"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "Ringo Starry",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "starryringo",
+											"disabled": true
+										},
+										{
+											"key": "firstname",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "lastname",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"34-v4pwo86Gd5QmXFn8F1G496y2FvE""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 15:04:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{    "success": true,    "status": "Registration Successful!"}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   "username": "Paul McVites",    "password": "mcvitespaul"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{users}}/login",
+							"host": [
+								"{{users}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "adminjordan",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "adminuser123",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login Successful output example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   "username": "Paul McVites",    "password": "mcvitespaul"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:3443/users/login",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "3443",
+									"path": [
+										"users",
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "adminjordan",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "adminuser123",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"f2-qRm8k802t4cEhe2mMJlOqUJdE8E""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 18:58:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{    "success": true,    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjUyZjFmNGVmZjgzNThlOWM5MDNiZWIiLCJpYXQiOjE2NDk2MTcxMTgsImV4cCI6MTY0OTYyMDcxOH0.Kzs3_0Y6y1hDNJamMr0OaCEIfyHg2f06GZioZnXf3ZM",    "status": "You are successfully logged in!"}"
+						},
+						{
+							"name": "Login Successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   "username": "adminjordan",    "password": "adminuser123"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{users}}/login",
+									"host": [
+										"{{users}}"
+									],
+									"path": [
+										"login"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "adminjordan",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "adminuser123",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/"f2-PWSlVHV6mu7rxBGn2Hd9uaVNPaI""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 10 Apr 2022 19:20:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{    "success": true,    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjUyYzBlYjU0ZGNkNDkzYzhhZjE1N2IiLCJpYXQiOjE2NDk2MTg0MzQsImV4cCI6MTY0OTYyMjAzNH0.yFUb5jHKmOXnUMEGpwPsG6g8A6iMN2naDMhKigktKFg",    "status": "You are successfully logged in!"}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Favorites",
+			"item": [
+				{
+					"name": "List all Favorites",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{favorites}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Post a new Favorite",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{favorites}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve favorite specified by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{favorites}}/:favId",
+							"host": [
+								"{{favorites}}"
+							],
+							"path": [
+								":favId"
+							],
+							"variable": [
+								{
+									"key": "favId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove favorite specified by Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{favorites}}/:favId",
+							"host": [
+								"{{favorites}}"
+							],
+							"path": [
+								":favId"
+							],
+							"variable": [
+								{
+									"key": "favId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change or Update favorite specified by Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{favorites}}/:favId",
+							"host": [
+								"{{favorites}}"
+							],
+							"path": [
+								":favId"
+							],
+							"variable": [
+								{
+									"key": "favId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove all Favorites",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{favoriteId}}"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjUyYzBlYjU0ZGNkNDkzYzhhZjE1N2IiLCJpYXQiOjE2NDk1OTIwOTUsImV4cCI6MTY0OTU5NTY5NX0.bVOmjV8bnE_PTc32hiTu2np-VV2BeKjeSd-62kO1HBw"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dishId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "userId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "leaderId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "promoId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "favoriteId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "commentId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
