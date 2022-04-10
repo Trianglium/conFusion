@@ -229,6 +229,30 @@
       "admin": false
     },
     {
+      "username": "adminjordan",
+      "password": "adminuser123",
+      "firstname": "jordan",
+      "lastname": "brockerrudow",
+      "_id": "6252c0eb54dcd493c8af157b",
+      "admin": true
+    },
+    {
+      "username": "jbr",
+      "password": "admin123",
+      "firstname": "J",
+      "lastname": "AdminJ",
+      "_id": "6252bdf8f436c651cdddb0bd",
+      "admin": true
+    },
+    {
+      "username": "trianglium",
+      "password": "confusion3",
+      "firstname": "jordan",
+      "lastname": "br",
+      "_id": "625223daa09dbc22ac270574",
+      "admin": false
+    },
+    {
       "username": "25 Cent",
       "password": "cent25",
       "firstname": "25",
