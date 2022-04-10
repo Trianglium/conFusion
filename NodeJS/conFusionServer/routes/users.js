@@ -13,6 +13,7 @@ router.use(bodyParser.json());
 router.get('/', authenticate.verifyUser, authenticate.verifyAdmin, (req,res,next) => {
   User.find({})
   .then((users) => {
+      console.log('List All Users: ', users);
       res.statusCode = 200;
       res.setHeader('Content-Type', 'application/json');
       res.json(users);
@@ -29,10 +30,13 @@ router.post('/signup', (req, res, next) => {
       res.json({err: err});
     }
     else {
+      console.log('Register User | User Info: ', req.body);
       if (req.body.firstname)
         user.firstname = req.body.firstname;
+        console.log('- Firstname: ', req.body.firstname);
       if (req.body.lastname)
         user.lastname = req.body.lastname;
+        console.log('- Lastname: ', req.body.lastname);
       user.save((err, user) => {
         if (err) {
           res.statusCode = 500;
@@ -52,6 +56,8 @@ router.post('/signup', (req, res, next) => {
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
   var token = authenticate.getToken({_id: req.user._id});
+  console.log('Login attempted: ', req.user);
+  console.log('TOKEN: ', token);
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');
   res.json({success: true, token: token, status: 'You are successfully logged in!'});
@@ -59,6 +65,7 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
 
 router.get('/logout', (req, res) => {
   if (req.session) {
+    console.log('Logout attempted. Request Session: ', req.session);
     req.session.destroy();
     res.clearCookie('session-id');
     res.redirect('/');
