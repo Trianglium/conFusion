@@ -63,7 +63,7 @@ router.post('/login', passport.authenticate('local'), (req, res) => {
   res.json({success: true, token: token, status: 'You are successfully logged in!'});
 });
 
-router.get('/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   if (req.session) {
     console.log('Logout attempted. Request Session: ', req.session);
     req.session.destroy();
