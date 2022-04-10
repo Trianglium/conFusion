@@ -14,7 +14,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
-// JWT 
+// JWT
 exports.getToken = function(user) {
     return jwt.sign(user, config.secretKey,
         {expiresIn: 3600});
@@ -40,4 +40,16 @@ exports.jwtPassport = passport.use(new JwtStrategy(opts,
         });
     }));
 
+
+
 exports.verifyUser = passport.authenticate('jwt', {session: false});
+
+exports.verifyAdmin = (req, res, next) => {
+  if (!req.user.admin){
+    var err = new Error('Forbidden. Admin privilage required.');
+    err.status = 403;
+    next(err);
+  } else {
+    next();
+  }
+}
