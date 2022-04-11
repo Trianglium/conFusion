@@ -11,7 +11,9 @@ favoriteRouter.use(bodyParser.json());
 
 favoriteRouter.route('/')
 .route('/')
-.get((req,res,next) => {
+.options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
+.get(cors.cors, (req,res,next) => {
+
     Favorites.find({})
     .populate('comments.author')
     .then((favorites) => {
@@ -21,7 +23,7 @@ favoriteRouter.route('/')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.post(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+.post(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     Favorites.create(req.body)
     .then((favorite) => {
         console.log('Dish Created ', favorite);
@@ -31,11 +33,11 @@ favoriteRouter.route('/')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.put(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+.put(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     res.statusCode = 403;
     res.end('PUT operation not supported on /favorites');
 })
-.delete(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+.delete(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     console.log('Deleting: ', req);
     Favorites.remove({})
     .then((resp) => {
@@ -47,7 +49,9 @@ favoriteRouter.route('/')
 });
 
 favoriteRouter.route('/:favId')
-.get((req,res,next) => {
+.options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
+.get(cors.cors, (req,res,next) => {
+
     Favorites.findById(req.params.favId)
     .populate('comments.author')
     .then((favorite) => {
@@ -58,11 +62,11 @@ favoriteRouter.route('/:favId')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.post(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+.post(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     res.statusCode = 403;
     res.end('POST operation not supported on /favorites/'+ req.params.favId);
 })
-.put(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+.put(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     Favorites.findByIdAndUpdate(req.params.favId, {
         $set: req.body
     }, { new: true })
@@ -73,7 +77,7 @@ favoriteRouter.route('/:favId')
     }, (err) => next(err))
     .catch((err) => next(err));
 })
-.delete(authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
+.delete(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
     Favorites.findByIdAndRemove(req.params.favId)
     .then((resp) => {
         res.statusCode = 200;
