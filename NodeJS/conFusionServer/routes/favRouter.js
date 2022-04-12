@@ -15,7 +15,8 @@ favoriteRouter.route('/')
 .get(cors.cors, (req,res,next) => {
 
     Favorites.find({})
-    .populate('comments.author')
+    .populate('dishes')
+    .populate('user')
     .then((favorites) => {
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
@@ -24,9 +25,30 @@ favoriteRouter.route('/')
     .catch((err) => next(err));
 })
 .post(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
-    Favorites.create(req.body)
+  Favorites.findOne({user: req.user._id})
     .then((favorite) => {
-        console.log('Dish Created ', favorite);
+      if (favorite == null) {
+        Favorites.create()
+          .then((favorite) => {
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'application/json');
+            for (const i in req.body) {
+              favorite.dishes.push(req.body[i]);
+          }
+          favorite.save()
+          res.json(favorite);
+        }, (err) => next(err));
+      } else {
+        for (const i in req.body) {
+          Favorites.findOne({user: newFavorite.user})
+              .then((oldFavorite) => {
+                  if (oldFavorite == null) {
+                      favorite.dishes.push(req.body[i]);
+                  }
+              });
+        }
+        favorite.save();
+
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(favorite);
@@ -38,7 +60,6 @@ favoriteRouter.route('/')
     res.end('PUT operation not supported on /favorites');
 })
 .delete(cors.corsWithOptions, authenticate.verifyUser, authenticate.verifyAdmin, (req, res, next) => {
-    console.log('Deleting: ', req);
     Favorites.remove({})
     .then((resp) => {
         res.statusCode = 200;
