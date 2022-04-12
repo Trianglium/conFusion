@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-
+const cors = require('./cors');
 // Integrate Leader Schema
 const Leaders = require('../models/leaders');
 
