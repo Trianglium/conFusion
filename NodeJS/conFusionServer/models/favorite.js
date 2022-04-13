@@ -4,12 +4,12 @@ require('mongoose-currency').loadType(mongoose);
 const Currency = mongoose.Types.Currency;
 
 // User's List of Favorite Dishes
-const favoriteSchema new Schema({
+const favoriteSchema = new Schema({
   dishes:  [{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Dishes'
   }],
-  author: {
+  user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'User'
   }

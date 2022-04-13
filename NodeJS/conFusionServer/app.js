@@ -17,7 +17,7 @@ var usersRouter = require('./routes/users');
 var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
-//var favoriteRouter = require('./routes/favoriteRouter');
+var favoriteRouter = require('./routes/favRouter');
 const uploadRouter = require('./routes/uploadRouter');
 
 // Connect to MongoDB Server
@@ -28,7 +28,7 @@ const Dishes = require('./models/dishes');
 const Promotions = require('./models/promotions');
 const Leaders = require('./models/leaders');
 const Users = require('./models/user');
-//const Favorites = require('./models/favorite');
+const Favorites = require('./models/favorite');
 
 // Establish connection to MongoDB
 const url = config.mongoUrl;
@@ -77,7 +77,7 @@ app.use('/promotions',promoRouter);
 app.use('/leaders',leaderRouter);
 
 // User favorite dishes list
-//app.use('/favorites',favoriteRouter);
+app.use('/favorites',favoriteRouter);
 
 // Uploads endpoint
 app.use('/imageUpload',uploadRouter);
