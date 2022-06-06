@@ -1,0 +1,18 @@
+.mat-list-item.mat-list-item-word-wrap {
+  height: initial !important;
+  .mat-line {
+    word-wrap: break-word !important;
+    white-space: pre-wrap !important;
+  }
+}
+.full-width {
+    width: 95%
+}
+
+.half-width {
+    width: 45%
+}
+
+.form-size {
+    width: 75%
+}
